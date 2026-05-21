@@ -1,0 +1,24 @@
+start: cell_def+
+
+cell_def: "cell" CNAME "{" rule* "}"
+
+?rule: divide_rule
+     | migrate_rule
+     | die_rule
+     | attack_rule
+
+divide_rule: "divide" "every" NUMBER TIME_UNIT
+migrate_rule: "migrate" "toward" CNAME
+die_rule: "die" "if" condition
+attack_rule: "attack" CNAME "if" condition
+
+condition: CNAME "<" NUMBER
+         | CNAME ">" NUMBER
+         | CNAME "==" NUMBER
+
+TIME_UNIT: "h" | "m" | "s" | "d"
+
+%import common.CNAME
+%import common.NUMBER
+%import common.WS
+%ignore WS
