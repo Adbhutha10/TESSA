@@ -1,9 +1,10 @@
-# BioSimLang
+# TESSA
+**(Tissue Environment Simulation Syntax Architecture)**
 
 A Domain-Specific Language (DSL) and compiler system designed to simplify biological simulation, tumor microenvironments, and cellular automata modeling.
 
 ## Overview
-BioSimLang bridges the gap between biology and computer science by allowing researchers to define complex cellular behavior using a clean, human-readable language syntax, and compiling it down into executable simulation code.
+TESSA bridges the gap between biology and computer science by allowing researchers to define complex cellular behavior using a clean, human-readable language syntax, and compiling it down into executable simulation code.
 
 ### Example Code
 ```text
