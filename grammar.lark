@@ -12,9 +12,9 @@ migrate_rule: "migrate" "toward" CNAME
 die_rule: "die" "if" condition
 attack_rule: "attack" CNAME "if" condition
 
-condition: CNAME "<" NUMBER
-         | CNAME ">" NUMBER
-         | CNAME "==" NUMBER
+condition: CNAME OPERATOR NUMBER
+
+OPERATOR: "<" | ">" | "=="
 
 TIME_UNIT: "h" | "m" | "s" | "d"
 
